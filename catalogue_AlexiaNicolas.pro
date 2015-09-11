@@ -6,7 +6,6 @@
 
 QT       += core
 
-QT       -= gui
 QT       += sql
 QT       += printsupport
 

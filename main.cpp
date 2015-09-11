@@ -1,6 +1,6 @@
 #include <QCoreApplication>
 #include <QSqlDatabase>
-#include <QPrinter>
+#include <QtGui/QPrinter>
 
 int main(int argc, char *argv[])
 {
