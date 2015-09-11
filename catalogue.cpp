@@ -9,9 +9,16 @@
 #include <QSqlQuery>
 #include <QSqlDatabase>
 
-catalogue::catalogue()
+catalogue::catalogue(int id, Qstring rayon, Qstring type, Qstring produit, Qstring libelle, float prix, int qte, Qdate dateLimite)
 {
-
+    idLots=id;
+    rayonLots=rayon;
+    typeLots=type;
+    produitLots=produit;
+    libelleLots=libelle;
+    prixLots=prix;
+    qteLots=qte;
+    dateLimiteLots=dateLimite;
 }
 
 
