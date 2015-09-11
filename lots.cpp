@@ -1,15 +1,17 @@
 /**
  * @author Alexia Fontraille
  * @date 11 septembre 2015
- * @file catalogue.cpp
- * @brief permet de générer le catalogue
+ * @file lots.cpp
+ * @brief permet de générer les lots
  */
-#include "catalogue.h"
+#include "lots.h"
 #include <QSqlRecord>
 #include <QSqlQuery>
 #include <QSqlDatabase>
+#include <QString>
+#include <QDate>
 
-catalogue::catalogue(int id, Qstring rayon, Qstring type, Qstring produit, Qstring libelle, float prix, int qte, Qdate dateLimite)
+Lots::Lots(int id, QString rayon, QString type, QString produit, QString libelle, float prix, int qte, QDate dateLimite)
 {
     idLots=id;
     rayonLots=rayon;
@@ -20,5 +22,6 @@ catalogue::catalogue(int id, Qstring rayon, Qstring type, Qstring produit, Qstri
     qteLots=qte;
     dateLimiteLots=dateLimite;
 }
+
 
 
