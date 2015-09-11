@@ -1,4 +1,5 @@
 #include <QCoreApplication>
+#include <QSqlDatabase>
 
 int main(int argc, char *argv[])
 {
