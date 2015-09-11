@@ -8,6 +8,7 @@ QT       += core
 
 QT       -= gui
 QT       += sql
+QT       += printsupport
 
 TARGET = catalogue_AlexiaNicolas
 CONFIG   += console
