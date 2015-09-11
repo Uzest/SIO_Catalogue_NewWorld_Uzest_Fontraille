@@ -18,7 +18,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    catalogue.cpp
+    catalogue.cpp \
+    pdf.cpp
 
 HEADERS += \
-    catalogue.h
+    catalogue.h \
+    pdf.h
