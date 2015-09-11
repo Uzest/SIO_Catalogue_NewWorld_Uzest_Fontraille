@@ -1,5 +1,6 @@
 #include <QCoreApplication>
 #include <QSqlDatabase>
+#include <QPrinter>
 
 int main(int argc, char *argv[])
 {
@@ -14,5 +15,7 @@ int main(int argc, char *argv[])
     baseCatalogue->open();
     QCoreApplication a(argc, argv);
     
+    cout<<"Bienvenue"<<endl;
+
     return a.exec();
 }
