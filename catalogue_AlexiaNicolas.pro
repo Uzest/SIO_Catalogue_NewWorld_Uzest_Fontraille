@@ -7,6 +7,7 @@
 QT       += core
 
 QT       -= gui
+QT       += sql
 
 TARGET = catalogue_AlexiaNicolas
 CONFIG   += console
