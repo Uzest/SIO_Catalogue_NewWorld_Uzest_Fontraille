@@ -1,10 +1,16 @@
 #ifndef PDF_H
 #define PDF_H
+#include <QString>
 
-class PDF
+class Pdf
 {
 public:
-    PDF();
+    Pdf();
+    int idPdf;
+    QString nom;
+
+private:
+     Pdf(int id, QString n);
 };
 
 #endif // PDF_H
