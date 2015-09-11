@@ -1,3 +1,8 @@
+/**
+ * @author Alexia Fontraille & Nicolas Uzest
+ * @file pdf.h
+ * @date 11 septembre 2015
+ */
 #ifndef PDF_H
 #define PDF_H
 #include <QString>

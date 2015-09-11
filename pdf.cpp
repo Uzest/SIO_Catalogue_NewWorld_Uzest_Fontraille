@@ -1,6 +1,7 @@
 /**
- *
+ * @author Alexia Fontraille & Nicolas Uzest
  * @date 11 septembre 2015
+ * @file pdf.cpp
  */
 #include "pdf.h"
 
