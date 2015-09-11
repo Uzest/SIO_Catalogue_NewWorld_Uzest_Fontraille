@@ -1,5 +1,4 @@
 #include "catalogue.h"
-#include <QMessageBox>
 #include <QSqlRecord>
 #include <QSqlQuery>
 #include <QSqlDatabase>
