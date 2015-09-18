@@ -17,9 +17,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    pdf.cpp \
-    lots.cpp
+    lots.cpp \
+    generationpdf.cpp
 
 HEADERS += \
-    pdf.h \
-    lots.h
+    lots.h \
+    generationpdf.h

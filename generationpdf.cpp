@@ -1,11 +1,11 @@
 /**
  * @author Alexia Fontraille & Nicolas Uzest
  * @date 11 septembre 2015
- * @file pdf.cpp
+ * @file generationpdf.cpp
  */
-#include "pdf.h"
+#include "generationpdf.h"
 
-Pdf::Pdf(int idPdf, QString nom)
+Generationpdf::Generationpdf(int idPdf, QString nom)
 {
     idPdf=id;
     nom=n;
