@@ -1,3 +1,10 @@
+/**
+ * @author Nicolas Uzest
+ * @date 18 septembre 2015
+ * @file connexion.cpp
+ * @brief Connexion à la BDD
+ */
+
 #include "connexion.h"
 #include <QSqlDatabase>
 #include <QCoreApplication>
