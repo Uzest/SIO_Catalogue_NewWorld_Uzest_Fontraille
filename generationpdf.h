@@ -6,16 +6,19 @@
 #ifndef GENERATIONPDF_H
 #define GENERATIONPDF_H
 #include <QString>
+#include <iostream>
+#include <QDate>
 
 class Generationpdf
 {
 public:
     Generationpdf();
-    int idPdf;
     QString nom;
+    QDate dateGeneration;
 
 private:
-     Generationpdf(int id, QString n);
+     Generationpdf(QString n, QDate d);
+     void ecrireTexte(QString leTexte);
 };
 
 #endif // GENERATIONPDF_H

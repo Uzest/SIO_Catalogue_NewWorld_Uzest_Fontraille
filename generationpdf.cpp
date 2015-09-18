@@ -5,8 +5,7 @@
  */
 #include "generationpdf.h"
 
-Generationpdf::Generationpdf(int idPdf, QString nom)
+Generationpdf::Generationpdf()
 {
-    idPdf=id;
-    nom=n;
+
 }
