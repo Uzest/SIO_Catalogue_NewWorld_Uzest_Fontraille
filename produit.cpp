@@ -13,7 +13,7 @@ Produit::Produit()
 {
 
 }
-
+/*
 QString::getLibelleProduit()
 {
     QSqlQuery requeteLib;
@@ -46,17 +46,17 @@ int::getQuantiteLot()
 {
     QSqlQuery requeteQte;
 
-    requetearepare("Select prixLot from lot where noProduit=prodNum" "values(:prodNum");
+    requeteQte.prepare(pare("Select qttMinimalLot from lot where noProduit=prodNum" "values(:prodNum");
 
-    requetePrix.bindValue(":prodNum",produitNumero);
+    requeteQte.bindValue(":prodNum",produitNumero);
 
-    requetePrix.exec();
+    requeteQte.exec();
 
-    return lotPrix;
+    return lotQte;
 }
 
 QDate::getDateLimiteConsomationLot()
 {
 
 }
-
+*/
