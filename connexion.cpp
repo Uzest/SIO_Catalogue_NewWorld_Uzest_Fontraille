@@ -15,12 +15,12 @@ Connexion::Connexion()
 QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
 baseCatalogue = new QSqlDatabase(db);
 baseCatalogue->setHostName("172.16.63.111");
-baseCatalogue->setUserName("nuzest");
+/*baseCatalogue->setUserName("nuzest");
 baseCatalogue->setDatabaseName("dbnuzestNewWorld");
-baseCatalogue->setPassword("BsIve12W6");
-//baseCatalogue->setUserName("afontraille");
-//baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
-//baseCatalogue->setPassword("dTj124fs");
+baseCatalogue->setPassword("BsIve12W6");*/
+baseCatalogue->setUserName("afontraille");
+baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
+baseCatalogue->setPassword("dTj124fs");
 bool ok = baseCatalogue->open();
 
 if(!ok)
