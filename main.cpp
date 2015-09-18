@@ -25,13 +25,10 @@ int main(int argc, char *argv[])
     printer.setOutputFileName("Catalogue.pdf");
 
     QPainter painter(&printer);
-    painter.begin(printer);
+    painter.begin(&printer);
     painter.setFont(QFont("Verdana",12));
     painter.drawText(200,200,"Catalogue New World");
     painter.end();
 
-
-
-
-    return a.exec();
+    return 0;
 }
