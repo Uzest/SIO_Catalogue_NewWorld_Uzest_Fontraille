@@ -3,6 +3,7 @@
 #include <QString>
 #include <QDate>
 #include <iostream>
+#include "connexion.h"
 
 using namespace std;
 

@@ -5,7 +5,7 @@
 #include <QCoreApplication>
 #include <QSqlQuery>
 #include <QSqlRecord>
-#include <QDebug>
+#include <cstdlib>
 #include <iostream>
 
 

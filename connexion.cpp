@@ -3,7 +3,7 @@
 #include <QCoreApplication>
 #include <QSqlQuery>
 #include <QSqlRecord>
-#include <QDebug>
+#include <cstdlib>
 #include <iostream>
 
 using namespace std;
@@ -22,10 +22,10 @@ bool ok = baseCatalogue->open();
 
 if(!ok)
 {
-    qDebug() << "La base de données est connectée";
+    cout << "La base de données est connectée"<<endl;
 }
 else
 {
-    qDebug() << "La connexion a échoué";
+    cout << "La connexion a échoué"<<endl;
 }
 }
