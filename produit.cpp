@@ -1,15 +1,16 @@
 #include "produit.h"
+#include <QDate>
 //constructeur
 
-Produit::Produit(int n, QString lib)
+Produit::Produit(int no, QString lib)
 {
     noProduit = no;
     libelleProduit = lib;
 }
 
-Produit::Produit() { }
-Produit::getLibelleProduit() { }
-Produit::getPrixUnitaireLot() { }
-Produit::getQuantiteLot() { }
-Produit::getDateLimiteConsomationLot() { }
-
+/*Produit::Produit()
+QString::getLibelleProduit()
+int::getPrixUnitaireLot() { }
+int::getQuantiteLot() { }
+QDate::getDateLimiteConsomationLot() { }
+*/

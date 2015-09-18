@@ -6,6 +6,8 @@
 #include <QCoreApplication>
 #include <QSqlDatabase>
 #include <QtGui/QPrinter>
+#include <QString>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +19,16 @@ int main(int argc, char *argv[])
     baseCatalogue->setUserName("afontraille");
     baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
     baseCatalogue->setPassword("dTj124fs");
-    baseCatalogue->open();
+    bool ok = baseCatalogue->open();
+
+    if(!ok)
+    {
+        qDebug() << "La base de données est connectée";
+    }
+    else
+    {
+        qDebug() << "La connexion a échoué";
+    }
     QCoreApplication a(argc, argv);
 
 

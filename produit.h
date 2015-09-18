@@ -1,8 +1,11 @@
 #ifndef PRODUIT_H
 #define PRODUIT_H
 #include <QString>
+#include <QDate>
 #include <iostream>
+
 using namespace std;
+
 /**
 * @class Classe Produit
 * @brief Classe représentant le produit
@@ -27,7 +30,7 @@ private:
 QString libelleProduit;
 public:
 //constructeur
-Produit(int n, QString lib);
+Produit(int no, QString lib);
 Produit();
 //retourne le libelle du produit
 QString getLibelleProduit();
