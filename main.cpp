@@ -3,7 +3,7 @@
  * @date 11 septembre 2015
  * @file main.cpp
  */
-#include <QCoreApplication>
+#include <QApplication>
 #include <QSqlDatabase>
 #include <QString>
 #include <QtGui/QPrinter>
@@ -17,12 +17,12 @@
 int main(int argc, char *argv[])
 {
 
-    QCoreApplication a(argc, argv);
+    QApplication a(argc, argv);
 
     QPrinter printer(QPrinter::HighResolution);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setFullPage(QPrinter::A4);
-    printer.setOutputFileName("Catalogue.pdf");
+    printer.setOutputFileName("/home/nuzest/Documents/Catalogue.pdf");
 
     QPainter painter(&printer);
     painter.begin(&printer);
