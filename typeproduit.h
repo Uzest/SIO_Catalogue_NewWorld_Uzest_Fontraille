@@ -5,4 +5,4 @@ class TypeProduit
 public:
 TypeProduit();
 };
-#endif // TYPEPRODUIT_H
+#endif // TYPEPRODUIT_Hxxx
