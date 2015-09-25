@@ -22,13 +22,11 @@ SOURCES += main.cpp \
     produit.cpp \
     rayon.cpp \
     typeproduit.cpp \
-    connexion.cpp \
-    mail.cpp
+    connexion.cpp
 
 HEADERS += \
     generationpdf.h \
     produit.h \
     rayon.h \
     typeproduit.h \
-    connexion.h \
-    mail.h
+    connexion.h
