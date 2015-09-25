@@ -1,3 +1,9 @@
+/**
+ * @author: Alexia Fontraille
+ * @file: typeProduit.cpp
+ * @date: 25/09/15
+ */
+
 #include "typeproduit.h"
 
 TypeProduit::TypeProduit(int n, QString l)
