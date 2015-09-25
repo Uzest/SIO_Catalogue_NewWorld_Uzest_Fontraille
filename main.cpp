@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
     QPrinter printer(QPrinter::HighResolution);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setFullPage(QPrinter::A4);
+    printer.setOutputFileName("/home/afontraille/Documents/PPE/SIO2/Catalogue.pdf");
     printer.setOutputFileName("/home/nuzest/Documents/Catalogue.pdf");
 
     QPainter painter(&printer);
