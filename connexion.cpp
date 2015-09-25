@@ -12,21 +12,32 @@
 #include <QSqlRecord>
 #include <QDebug>
 #include <iostream>
+#include <QMessageBox>
 
 using namespace std;
 
 Connexion::Connexion()
 {
-    //connexion a la base de données
-    //QSqlDatabase * baseCatalogue;
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    ui->setupUi(this);
+    QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
+    baseCatalogue=new QSqlDatabase(db);
+    baseCatalogue->setHostName("172.16.63.111");
+    baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
+    baseCatalogue->setUserName("afontraille");
+    baseCatalogue->setPassword("dTj124fs");
+    bool ok = baseCatalogue->open();
+    if(!ok)
+    {
+        QMessageBox::warning(this,"New World BackOffice","La connexion à la base de données a échoué\nVeuillez vérifier que le service mysql est lancé sur localhost",QMessageBox::Ok|QMessageBox::Cancel,QMessageBox::Ok);
+    }
+
+
+
+    /*QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     baseCatalogue = new QSqlDatabase(db);
     baseCatalogue->setHostName("172.16.63.111");
-    /*baseCatalogue->setUserName("nuzest");
-    baseCatalogue->setDatabaseName("dbnuzestNewWorld");
-    baseCatalogue->setPassword("BsIve12W6");*/
-    baseCatalogue->setUserName("afontraille");
     baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
+    baseCatalogue->setUserName("afontraille");
     baseCatalogue->setPassword("dTj124fs");
     bool ok = baseCatalogue->open();
 
@@ -37,5 +48,5 @@ Connexion::Connexion()
     else
     {
         qDebug() << "La connexion a échoué";
-    }
+    }*/
 }
