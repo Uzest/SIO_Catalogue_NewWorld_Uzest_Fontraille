@@ -2,6 +2,7 @@
 #define PRODUIT_H
 #include <QString>
 #include <QDate>
+#include <QtGui/QPrintEngine>
 #include <iostream>
 #include "connexion.h"
 
