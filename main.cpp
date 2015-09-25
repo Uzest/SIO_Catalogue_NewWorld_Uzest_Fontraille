@@ -5,10 +5,10 @@
  */
 #include <QCoreApplication>
 #include <QSqlDatabase>
-#include <QtGui/QPrinter>
 #include <QString>
 #include <QtGui/QPrinter>
 #include <QtGui/QPainter>
+#include <QtGui/QPrintEngine>
 #include <QDebug>
 
 #include "connexion.h"
