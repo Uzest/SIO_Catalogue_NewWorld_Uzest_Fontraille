@@ -1,8 +1,17 @@
 #ifndef TYPEPRODUIT_H
 #define TYPEPRODUIT_H
+
+#include "rayon.h"
 class TypeProduit
 {
+private:
+    int no;
+    QString libelleType;
 public:
-TypeProduit();
+    TypeProduit(int n, QString l);
+    TypeProduit();
+    QString getLibelleTypeProduit();
+    int getNoTypeProduit();
 };
-#endif // TYPEPRODUIT_Hxxx
+
+#endif // TYPEPRODUIT_H
