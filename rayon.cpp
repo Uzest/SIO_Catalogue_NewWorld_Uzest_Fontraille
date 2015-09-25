@@ -10,13 +10,13 @@
 #include <QString>
 #include <QDate>
 
-// Constructeur du rayon
+//Constructeur du rayon
 Rayon::Rayon(int no, QString lib)
 {
     noSurType=no;
     libelleSurType=lib;
 
-    // On récupère les champs dans la BDD
+    //On récupère les champs dans la BDD
     QSqlQuery requeteSurType;
     requeteSurType.exec("SELECT noSurType, libelleSurType FROM surType");
     while(requeteSurType.next())
