@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 {
 
     QCoreApplication a(argc, argv);
-
+/*
     QPrinter printer(QPrinter::HighResolution);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setFullPage(QPrinter::A4);
@@ -30,5 +30,5 @@ int main(int argc, char *argv[])
     painter.drawText(200,200,"Catalogue New World");
     painter.end();
 
-    return 0;
+    return 0;*/
 }
