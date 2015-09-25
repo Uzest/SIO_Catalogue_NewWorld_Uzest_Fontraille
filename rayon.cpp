@@ -10,5 +10,35 @@
 #include <QString>
 #include <QDate>
 
-Rayon::Rayon() { }
+// Constructeur du rayon
+Rayon::Rayon(int no, QString lib)
+{
+    noSurType=no;
+    libelleSurType=lib;
 
+    // On récupère les champs dans la BDD
+    QSqlQuery requeteSurType;
+    requeteSurType.exec("SELECT noSurType, libelleSurType FROM surType");
+    while(requeteSurType.next())
+    {
+        int noSurType = requeteSurType.value(0).toInt();
+        QString libelleSurType = requeteSurType.value(1).toString();
+    }
+}
+
+// Constructeur vide
+Rayon::Rayon()
+{
+}
+
+//Cette fonction retourne le numéro du surType (du rayon)
+int Rayon::getNoSurType()
+{
+    return noSurType;
+}
+
+//Cette fonction retourne le libellé du surType (du rayon)
+QString Rayon::getLibelleSurType()
+{
+    return libelleSurType;
+}
