@@ -12,13 +12,17 @@
 class Generationpdf
 {
 public:
-    Generationpdf();
+
     QString nom;
     QDate dateGeneration;
 
-private:
-     Generationpdf(QString n, QDate d);
-     void ecrireTexte(QString leTexte);
+    Generationpdf();
+    Generationpdf(QString n, QDate d);
+    //Ecrire le texte du PDF
+    void ecrireTexte(QString leTexte);
+    //Fermer le texte du PDF
+    void fermer();
 };
 
 #endif // GENERATIONPDF_H
+
