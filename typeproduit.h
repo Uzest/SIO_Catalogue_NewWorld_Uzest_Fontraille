@@ -1,3 +1,9 @@
+/**
+ * @author: Alexia Fontraille
+ * @file: typeProduit.h
+ * @date: 25/09/15
+ */
+
 #ifndef TYPEPRODUIT_H
 #define TYPEPRODUIT_H
 
