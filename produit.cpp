@@ -13,14 +13,16 @@ Produit::Produit()
 {
 
 }
-/*
-QString::getLibelleProduit()
+
+QString Produit::getLibelleProduit()
 {
     QSqlQuery requeteLib;
 
-    requeteLib.prepare("Select libelleProd from produit where num=prodNum" "values(:prodNum");
+    QString produitLibelle;
 
-    requeteLib.bindValue(":prodNum",produitNumero);
+    requeteLib.prepare("Select libelleProd from produit where num=prodNum" "values(:libelleProd");
+
+    requeteLib.bindValue(":libelleProd",produitLibelle);
 
     requeteLib.exec();
 
@@ -28,13 +30,15 @@ QString::getLibelleProduit()
 
 }
 
-int::getPrixUnitaireLot()
+int Produit::getPrixUnitaireLot()
 {
     QSqlQuery requetePrix;
 
-    requetePrix.prepare("Select prixLot from lot where noProduit=prodNum" "values(:prodNum");
+    float lotPrix;
 
-    requetePrix.bindValue(":prodNum",produitNumero);
+    requetePrix.prepare("Select prixLot from lot where noProduit=prodNum" "values(:prodLots");
+
+    requetePrix.bindValue(":prodNum",lotPrix);
 
     requetePrix.exec();
 
@@ -42,21 +46,35 @@ int::getPrixUnitaireLot()
 
 }
 
-int::getQuantiteLot()
+int Produit::getQuantiteLot()
 {
     QSqlQuery requeteQte;
 
-    requeteQte.prepare(pare("Select qttMinimalLot from lot where noProduit=prodNum" "values(:prodNum");
+    int lotQte;
 
-    requeteQte.bindValue(":prodNum",produitNumero);
+    requeteQte.prepare("Select qttMinimalLot from Lots where noProduit=prodNum" "values(:QteMin");
+
+    requeteQte.bindValue(":QteMin",lotQte);
 
     requeteQte.exec();
 
     return lotQte;
 }
 
-QDate::getDateLimiteConsomationLot()
+QDate Produit::getDateLimiteConsomationLot()
 {
+    QSqlQuery requeteDate;
+
+    QDate dateLimite;
+
+    requeteDate.prepare("Select lotDateLimite from Lots" "values(:dateLimite");
+
+    requeteDate.bindValue(":dateLimite",dateLimite);
+
+    requeteDate.exec();
+
+
+    return dateLimite;
 
 }
-*/
+

@@ -21,9 +21,12 @@ Connexion::Connexion()
     QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
     baseCatalogue=new QSqlDatabase(db);
     baseCatalogue->setHostName("172.16.63.111");
-    baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
-    baseCatalogue->setUserName("afontraille");
-    baseCatalogue->setPassword("dTj124fs");
+    //baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
+    //baseCatalogue->setUserName("afontraille");
+    //baseCatalogue->setPassword("dTj124fs");
+    baseCatalogue->setDatabaseName("dbnuzestNewWorld");
+    baseCatalogue->setUserName("nuzest");
+    baseCatalogue->setPassword("bsIve12W6");
     baseCatalogue->open();
 
 }
