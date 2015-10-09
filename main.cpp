@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
 
 
-    QSqlQuery queryPdv("select libelle, activite, nom, prenom, rue1, rue2, CP, tel, email, CP, ville from PointDeVente");
+    QSqlQuery queryPdv("select libelle, activite, nom, prenom, rue1, rue2, CP, tel, email, CP, localites from pointDeVente");
     int cpt=0;
 
     while (queryPdv.next())
@@ -63,31 +63,31 @@ int main(int argc, char *argv[])
         painter.drawText(120,900+cpt*500,libelle);
         //Ressors l'activité
         QString activite=queryPdv.value(1).toString();
-        painter.drawText(120,900+cpt*500,activite);
+        painter.drawText(2000,900+cpt*500,activite);
         //Ressors le nom
-        QString nom=queryPdv.value(1).toString();
-        painter.drawText(120,900+cpt*500,nom);
+        QString nom=queryPdv.value(2).toString();
+        painter.drawText(3500,900+cpt*500,nom);
         //Ressors le prénom
-        QString prenom=queryPdv.value(1).toString();
-        painter.drawText(120,900+cpt*500,prenom);
+        QString prenom=queryPdv.value(3).toString();
+        painter.drawText(4200,900+cpt*500,prenom);
         //Ressors le téléphone
-        QString tel=queryPdv.value(1).toString();
-        painter.drawText(2000,900+cpt*500,tel);
+        QString tel=queryPdv.value(4).toString();
+        painter.drawText(5200,900+cpt*500,tel);
         //Ressors l'email
-        QString email=queryPdv.value(2).toString();
-        painter.drawText(3500,900+cpt*500,email);
+        QString email=queryPdv.value(5).toString();
+        painter.drawText(7000,900+cpt*500,email);
         //Ressors la rue1
-        QString rue1=queryPdv.value(3).toString();
-        painter.drawText(300,1100+cpt*500,rue1);
+        QString rue1=queryPdv.value(6).toString();
+        painter.drawText(300,1150+cpt*500,rue1);
         //Ressors la rue2
-        QString rue2=queryPdv.value(4).toString();
-        painter.drawText(2500,1100+cpt*500,rue2);
+        QString rue2=queryPdv.value(7).toString();
+        painter.drawText(1000,1150+cpt*500,rue2);
         //Ressors le CP
-        QString CP=queryPdv.value(1).toString();
-        painter.drawText(120,900+cpt*500,CP);
+        QString CP=queryPdv.value(8).toString();
+        painter.drawText(2500,1150+cpt*500,CP);
         //Ressors la ville
-        QString ville=queryPdv.value(1).toString();
-        painter.drawText(120,900+cpt*500,ville);
+        QString ville=queryPdv.value(9).toString();
+        painter.drawText(4700,1150+cpt*500,ville);
 
         cpt++;
 
