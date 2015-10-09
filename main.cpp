@@ -30,12 +30,12 @@ int main(int argc, char *argv[])
      */
     QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("172.16.63.111");
-    //baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
-    //baseCatalogue->setUserName("afontraille");
-    //baseCatalogue->setPassword("dTj124fs");
-    db.setDatabaseName("dbnuzestNewWorld");
-    db.setUserName("nuzest");
-    db.setPassword("bsIve12W6");
+    db.setDatabaseName("dbafontrailleNewWorld");
+    db.setUserName("afontraille");
+    db.setPassword("dTj124fs");
+    //db.setDatabaseName("dbnuzestNewWorld");
+    //db.setUserName("nuzest");
+    //db.setPassword("bsIve12W6");
     db.open();
 
     QPrinter printer(QPrinter::HighResolution);
