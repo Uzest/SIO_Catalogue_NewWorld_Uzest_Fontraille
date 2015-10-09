@@ -19,7 +19,7 @@ public:
     Generationpdf();
     Generationpdf(QString n, QDate d);
     //Ecrire le texte du PDF
-    void ecrireTexte();
+    void ecrireTexte(QString leTexte);
     //Fermer le texte du PDF
     void fermer();
 };
