@@ -24,6 +24,9 @@ int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
+    /*QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+    QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));*/
     /**
      * @brief db
      * Connexion à la base de données
@@ -45,7 +48,7 @@ int main(int argc, char *argv[])
 
     painter.setFont(QFont("Verdana",30));
     painter.drawText(50,200,"Catalogue New World");
-    painter.setFont(QFont("Verdana",15));
+    painter.setFont(QFont("Verdana",15,QFont::Bold));
     painter.drawText(50,600,"Liste des Points de ventes");
 
     int horizontale=300;
@@ -95,15 +98,19 @@ int main(int argc, char *argv[])
     }
         //###################RAYON = SURTYPE#######################
 
+        painter.setFont(QFont("Verdana",12,QFont::Bold));
+        painter.drawText(200,2500,"~~~ BIENVENUE DANS LE GÉNÉRATEUR DU CATALOGUE NEWWORLD ~~~");
         //###########################RAYONS########################
         QSqlQuery queryRayon;
         queryRayon.exec("select no, libelleSurType from surType");
         while(queryRayon.next())
         {
               //définis la couleur
-              painter.setPen(QColor(255,0,50,200));
+              painter.setPen(QColor(255,0,0));
               //Définis le texte
               painter.setFont(QFont("Verdana",15));
+              //MESSAGE DE BIENVENUE
+              //cout<<"bonjour";
               QString noRayon=queryRayon.value(0).toString();
               QString libelle=queryRayon.value(1).toString();
               QString qtProd="Quantite";
@@ -111,14 +118,15 @@ int main(int argc, char *argv[])
               QString modeProdProduit="Production";
               QString dateRecolte="date de recolte";
               QString jourConservationProd="Conservation";
+              painter.setFont(QFont("Verdana",18,QFont::Bold));
               painter.drawText(300,verticale,"Rayon: "+libelle);
               verticale=verticale+300;
-              painter.setFont(QFont("Verdana",10));
+              painter.setFont(QFont("Verdana",10,QFont::Bold));
               painter.drawText(3800,verticale,qtProd);
               painter.drawText(4700,verticale,prixProd);
               painter.drawText(5400,verticale,modeProdProduit);
-              painter.drawText(6400,verticale,dateRecolte);
-              painter.drawText(7700,verticale,jourConservationProd);
+              painter.drawText(6500,verticale,dateRecolte);
+              painter.drawText(8000,verticale,jourConservationProd);
 
               //##################PRODUIT##############################
               QSqlQuery queryTypeProduit;
@@ -126,15 +134,15 @@ int main(int argc, char *argv[])
               while(queryTypeProduit.next())
               {
                   painter.setFont(QFont("Verdana",12));
-                  QString libelleProd=queryTypeProduit.value(0).toString();
-                  QString noProd=queryTypeProduit.value(1).toString();
+                  QString libelleProd=queryTypeProduit.value(1).toString();
+                  QString noProd=queryTypeProduit.value(0).toString();
                   //################METTRE L'IMAGE ICI#############
-                  /*QImage img(libelleType+".png");
-                  img.load(libelleType+".png");
+                  QString nomFichier="/tmp/images/"+libelleProd+".png";
+                  qDebug()<<nomFichier;
+                  QImage img("/tmp/images/"+libelleProd+".png");
                   painter.drawImage(QPoint(1000,verticale+100),img);
-                  painter.drawRect(700,verticale-200,8100,900);
-                  painter.drawText(1000,verticale,libTypeProduit);
-                  verticale=verticale+300;*/
+                  painter.drawText(1000,verticale,libelleProd);
+                  verticale=verticale+300;
 
                   QSqlQuery queryProduit;
                   queryProduit.exec("select libelleProd, num from produit where noType=" + QString(noProd));
@@ -165,10 +173,6 @@ int main(int argc, char *argv[])
               }
               verticale=verticale+200;
         }
-
-
-
-        //QSqlQuery queryDistribution();
         painter.end();
 
     return 0;
