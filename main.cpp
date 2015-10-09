@@ -13,12 +13,21 @@
 
 #include "connexion.h"
 
+/**
+ * @brief main
+ * @param argc
+ * @param argv
+ * @return
+ */
 
 int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
-
+    /**
+     * @brief db
+     * Connexion à la base de données
+     */
     QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("172.16.63.111");
     //baseCatalogue->setDatabaseName("dbafontrailleNewWorld");
@@ -69,6 +78,9 @@ int main(int argc, char *argv[])
 
         painter.setFont(QFont("Verdana",15));
         painter.drawText(50,900+cpt*800,"Liste des Produits");
+
+
+        QSqlQuery queryDistribution("select ");
         painter.end();
 
     return 0;
