@@ -1,2 +1,0 @@
-# SIO_Catalogue_NewWorld_Uzest_Fontraille
-Projet Catalogue en groupe
